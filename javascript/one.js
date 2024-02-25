@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const boxes = document.querySelectorAll('.box1, .box2, .box3, .box4');
-    boxes.forEach(box => {
-        const height = box.clientHeight;
-        box.style.width = height + 'px';
-    });
-});
+// create a timeline
+let tl = gsap.timeline()
+
+// add the tweens to the timeline - Note we're using tl.to not gsap.to
+tl.to(".green", { x: 600, duration: 2 });
+tl.to(".purple", { x: 600, duration: 1 });
+tl.to(".orange", { x: 600, duration: 1 });

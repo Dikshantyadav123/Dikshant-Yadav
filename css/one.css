@@ -4,34 +4,34 @@
     color: rgb(94, 91, 91);
 }
 
+.container{
+width: 100%;
+height: fit-content;
+    display: grid;
+    grid-template-rows: repeat(20vh, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    background-color: rgb(207, 138, 28);
+    margin-bottom: 2vh;
+}
+
 .head {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(47, 43, 43);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card {
-    background-color: rgba(0, 0, 0, 0.145);
-    height: 90%;
-    width: 90%;
-}
-
-.page1 {
-    background-color: rgb(84, 55, 180);
-    width: 100%;
+    background-color: #c35656; /* Optional: Add background color for visualization */
+    padding: 20px; /* Optional: Adjust padding as needed */
+    text-align: center; /* Optional: Adjust text alignment as needed */
+    margin-bottom: 2vh;
+    height: fit-content;
+    grid-column-start: 1;
+    grid-column-end: -1;
 }
 
 .box_A,
 .box_B,
 .box_C,
 .box_D {
-    width: fit-content;
+    max-width: fit-content;
     background-color: rgb(108, 101, 101);
     margin: 2vh 0;
-    overflow: hidden;
     border-radius: 10px;
 }
 
@@ -62,35 +62,30 @@
     background-color: chartreuse;
 }
 
-@media screen and (max-width: 900px) {
-    .page1 {
-        background-color: black;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+
+@media screen and (max-width: 1200px) {
+    .container {
+        background-color: rgb(88, 13, 154);
+        grid-template-columns: repeat(3, 1fr);
+   
     }
 } 
 
-.page1 {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.box_A,
-.box_B,
-.box_C,
-.box_D {
-    flex: 1;
-    margin: 10px;
-    border: 1px solid #ccc;
-    position: relative;
-}
-
-.box1,
-.box2,
-.box3,
-.box4 {
-    flex: 1;
+@media screen and (max-width: 1000px) {
+    .container {
+        background-color: black;
+        grid-template-columns: repeat(2, 1fr);
+   
+        
+    }
 } 
+
+
+@media screen and (max-width: 690px) {
+    .container {
+        background-color: rgb(197, 17, 17);
+        grid-template-columns: repeat(1, 1fr);
+   
+    }
+} 
+
