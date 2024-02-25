@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: rgb(94, 91, 91);
+}
+
+.head {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(47, 43, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.145);
+    height: 90%;
+    width: 90%;
+}
+
+.page1 {
+    background-color: rgb(84, 55, 180);
+    width: 100%;
+}
+
+.box_A,
+.box_B,
+.box_C,
+.box_D {
+    width: fit-content;
+    background-color: rgb(108, 101, 101);
+    margin: 2vh 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+    height: 300px; /* Change this height to be equal to the width */
+    width: 300px;
+    overflow: hidden;
+    margin: 1vh 0.5vw;
+    border-radius: 2vh;
+}
+
+.box1 {
+    background-color: aqua;
+}
+
+.box2 {
+    background-color: rgb(0, 0, 179);
+}
+
+.box3 {
+    background-color: rgb(204, 0, 255);
+}
+
+.box4 {
+    background-color: chartreuse;
+}
+
+@media screen and (max-width: 900px) {
+    .page1 {
+        background-color: black;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+} 
+
+.page1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box_A,
+.box_B,
+.box_C,
+.box_D {
+    flex: 1;
+    margin: 10px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+    flex: 1;
+} 
